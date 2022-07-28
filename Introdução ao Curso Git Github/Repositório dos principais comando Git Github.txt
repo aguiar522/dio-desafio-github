@@ -1,2 +1,66 @@
 Links ÚTEIS :https://www.markdownguide.org/basic-syntax/
 https://git-scm.com/downloads
+
+#Chaves SSH 
+
+#O que é chave ssh ?
+
+É uma forma de ter uma comunicação segura
+com criptografia entre a máquina local e o Github.
+Vai existi duas chaves: A chave pública e a chave privada.
+
+#A chave pública vamos configurar no Github e a chave privada ficará 
+na máquina local. Apartir que configuramos o ssh o Github vai estabelecer
+uma pré conexão.
+
+###################################################
+
+#Configuração
+
+Quando fizemos a conta, vá no menu onde fica sua imagem,
+na opção settings--> no lado esquerdo procure--> SSH and GPG Keys,
+Primeira opcão SSH Keys--> no Botão New SSH Key--> no campo colocamos,
+um Title um nome pra essa chave e depois na máquina local em linha de comando
+no Git Bash o procedimento tanto no windows como no linux é parecido por que 
+uitlizamos o bash.
+
+#Comandos para gerar o SSH
+
+1)ssh-keygen -t ed25519 -C e seu Email igual o Email do Github 'Enter'.
+
+2)vai perdir pra colocamos uma senha 'Enter'
+
+3)vai ser gerado 2 arquivos --> em /c/Users/nome_do_usuário_local/.ssh/
+
+4)acesse esse caminho --> cd /c/Users/nome_do_usuário_local/.ssh 'Enter'.
+
+5)após estar no diretório/.ssh--> digite ls 'Enter'
+
+6)depois que localizar o arquivo .pub --> acesse o mesmo --> cat e o nome do arquivo
+
+7)copie o conteúdo e volte para o Github.
+
+8)opcão SSH Keys--> no Botão NewSSHKey--> SSH/Add new
+
+9)na opção Title coloque uma descrição--> e em Key no campo abaixo cole o
+conteúdo do arquivo .pub e depois pressione o botão Add SSH Key.
+
+10)Depois voltamos para o diretório do Git local,
+cd /c/Users/nome_do_usuário_local/.ssh 'Enter' -->/.ssh digitamos-->
+eval $(ssh-agent -s) 'Enter'
+
+11)Depois passamos a nossa chave privada para o Github
+digite ls para ver o aquivo id_ed25519 sem a extensão .pub e 'Enter'
+
+12)digitamos ssh-add id_ed25519 o mesmo vai perdir sua senha e 
+vai aparecer essa mensagem Identity added: id_ed255519 "seu Email"
+
+ #####################################################
+
+	Iniciar o Git
+
+Comandos
+
+#
+
+
