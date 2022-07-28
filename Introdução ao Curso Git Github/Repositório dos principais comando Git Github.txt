@@ -61,6 +61,18 @@ vai aparecer essa mensagem Identity added: id_ed255519 "seu Email"
 
 Comandos
 
-#
+#git status ---> verifica o status do git.
+
+#git add *  ou git add . --> adiciona todos arquivos novos e modificados.
+
+#realizando commit
+git commit -m "Comentário para facilitar o que estar sendo commitado" 
+
+Observação : Comentários são importantes para saber quais arquivos foram criados,
+             e modificados.
+
+#Manda todos os commit pra nuvem "Github"
+git push origin main
+	 
 
 
